@@ -1,0 +1,43 @@
+@import "_normalize";
+$Lb: 'Lato-Bold';
+$Ll: 'Lato-Light';
+$Lr: 'Lato-Regular';
+$Lsb: 'Lato-Semibold';
+$RS: 'robotoslabbold';
+$LN: 'Lato';
+$RSN: 'Roboto Slab';
+
+
+$normal: normal;
+$italic: italic;
+$bold: bold;
+$semibold: 600;
+$medium: 500;
+$norm: 400;
+$heavy: 700;
+$black: 900;
+$light: 300;
+
+$dir:'../fonts/';
+$bgcolor:rgba(5,39,20,0.5);
+$btncolor:#e5ba04;
+$wt:#fff;
+$bk:#000;
+$accentcolor:#1be9d8;
+$ttl:31px;
+
+
+@mixin font($fontname, $fweight, $fstyle, $fontfamily){
+    @font-face {
+                font-family: $fontfamily;
+                src: url($dir+$fontname+'.ttf') format("truetype");
+                font-weight: $fweight;
+                font-style: $fstyle;
+    }
+}
+@include font($Lb, $bold, $normal, $LN);
+@include font($Ll, $light, $normal, $LN);
+@include font($Lsb, $semibold, $normal, $LN);
+@include font($RS, $normal, $normal, $RSN);
+@include font($Lr, $normal, $normal, $LN);
+@include font($Lr, $norm, $normal, $LN);
