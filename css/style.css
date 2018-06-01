@@ -139,3 +139,269 @@ a {
   font-weight: 400;
   font-style: normal;
 }
+body {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ttl {
+  text-align: center;
+  padding-top: 90px;
+}
+.ttl h2 {
+  color: #000;
+  font-family: Lato;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 40px;
+  position: relative;
+  display: inline-block;
+}
+.ttl h2:after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  right: -3px;
+  background: #e5ba04;
+  height: 15px;
+  bottom: 0;
+  z-index: -1;
+}
+.ttl h3 {
+  color: #000;
+  font-family: Lato;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.btn button {
+  color: #1be9d8;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  border: 2px solid #1be9d8;
+  border-radius: 7px;
+  min-width: 230px;
+  width: 100%;
+  height: 40px;
+  background: none;
+  position: relative;
+  z-index: 1;
+}
+.btn button:before, .btn button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  background: #1be9d8;
+  z-index: -1;
+}
+.btn button:hover:before {
+  right: 0;
+  transition: all 0.1s ease-out;
+}
+.btn button:hover:after {
+  right: 0;
+  background: rgba(5, 39, 20, 0.8);
+  transition: all 0.15s ease-out 0.13s;
+  border-radius: 5px;
+}
+.btn button:hover {
+  color: #fff;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+section.one-scrn {
+  min-height: 750px;
+  background: url(../img/bg1.jpg) no-repeat;
+  color: #fff;
+}
+section.one-scrn .flex {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+section.one-scrn header {
+  min-height: 112px;
+  width: 100%;
+  background: rgba(5, 39, 20, 0.5);
+  position: relative;
+  z-index: 2;
+}
+section.one-scrn header .logo {
+  width: 375px;
+  display: flex;
+  align-items: center;
+}
+section.one-scrn header .logo-img a img {
+  max-width: 130px;
+  height: auto;
+}
+section.one-scrn header .logo-slogan {
+  margin-left: 22px;
+}
+section.one-scrn header .logo-slogan p {
+  color: #fff;
+  font-family: Lato;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 32px;
+}
+section.one-scrn .flex-wrap {
+  max-width: 710px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+section.one-scrn .flex-wrap .phone {
+  display: flex;
+  align-items: center;
+}
+section.one-scrn .flex-wrap .phone .ph a {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+section.one-scrn .flex-wrap .phone .ph a img {
+  width: 24px;
+  height: 24px;
+}
+section.one-scrn .flex-wrap .phone .ph a span {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 19px;
+}
+section.one-scrn .flex-wrap .phone .callback {
+  margin-left: 45px;
+}
+section.one-scrn .flex-wrap nav {
+  width: 100%;
+  margin-top: 14px;
+}
+section.one-scrn .flex-wrap nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+section.one-scrn .flex-wrap nav ul li {
+  display: inline-block;
+}
+section.one-scrn .flex-wrap nav ul li a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+}
+section.one-scrn .flex-wrap nav ul li.active a, section.one-scrn .flex-wrap nav ul li:hover a {
+  position: relative;
+  z-index: 2;
+  color: #000;
+}
+section.one-scrn .flex-wrap nav ul li.active a:before, section.one-scrn .flex-wrap nav ul li:hover a:before {
+  content: "";
+  position: absolute;
+  background: #e5ba04;
+  top: -10px;
+  bottom: -21px;
+  right: -20px;
+  left: -20px;
+  z-index: -1;
+}
+section.one-scrn .banner {
+  width: 100%;
+}
+section.one-scrn .banner .flex {
+  display: flex;
+  justify-content: space-between;
+}
+section.one-scrn .banner .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.one-scrn .banner .desc .ttl-accent {
+  margin-top: 75px;
+}
+section.one-scrn .banner .desc .ttl-accent h1 {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+  font-family: "Roboto Slab";
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 54px;
+}
+section.one-scrn .banner .desc .ttl-desc {
+  margin-top: 33px;
+}
+section.one-scrn .banner .desc .ttl-desc p {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.13);
+  font-family: Lato;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33px;
+}
+section.one-scrn .banner .desc .one-screen {
+  margin-top: 85px;
+}
+section.one-scrn .banner .desc .one-screen button {
+  max-width: 365px;
+  width: 100%;
+}
+section.one-scrn .banner .auto {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+section.one-scrn .banner .auto .img img {
+  max-width: 1130px;
+  height: auto;
+}
+section.two-scrn {
+  background: url(../img/bg2.jpg);
+}
+section.two-scrn .services .flex-wrap {
+  width: 100%;
+  min-height: 650px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+section.two-scrn .services .item {
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+section.two-scrn .services .item .srvc {
+  padding-top: 11px;
+}
+section.two-scrn .services .item .desc {
+  margin-top: 29px;
+}
+section.two-scrn .services .item .desc p {
+  color: #000;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+}
