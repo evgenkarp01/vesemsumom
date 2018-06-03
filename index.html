@@ -178,6 +178,361 @@
 				</div>
 			</div>
 		</div>
+		
+		<div class="container">
+	        <div class="ttl">
+	            <h2>Рассчитать стоимость грузоперевозки</h2>
+	        </div>
+	        <div class="calculator">
+	            <form action="">
+                   <div class="fl-wrapp">
+                       <div class="naprava">
+                            <div class="radio_buttons">
+                               <div class="zag">
+                                   <h4>Выберите направление:</h4>
+                               </div>
+
+                                <div class="flex-wrap otstup">
+                                    <div class="button-calc">
+                                        <input type="radio" name="option" id="radio1" checked />
+                                        <label for="radio1">В городе</label>
+                                    </div>
+                                    <div class="button-calc">
+                                        <input type="radio" name="option" id="radio2" />
+                                        <label for="radio2">По области</label>
+                                    </div>
+                                    <div class="button-calc">
+                                        <input type="radio" name="option" id="radio3" />
+                                        <label for="radio3">По России</label>
+                                    </div>
+                                </div>
+
+                                <div class="opisanie">
+                                    <p>
+                                        По г.Ростову-на-Дону ставка 500р в час.
+                                    </p>
+                                    <p>
+                                        Минимальное время аренды машины - 2 часа.
+                                    </p>
+                                    <p>
+                                        Обычно этого времени хватает на погрузку, доставку и разгрузку машины.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="otkuda">
+                               <div class="wrapp">
+                                   <label for="calc_region_1">Откуда едем:</label>
+                                    <div class="select_main">
+                                        <p></p>
+                                        <select name="version_pledge" id="calc_region_1">
+                                            <option value="1">Ростов-на-Дону</option>
+                                            <option value="2">Батайск</option>
+                                            <option value="3">Из области</option>
+                                        </select>
+                                    </div>
+                               </div>
+                                <div class="checkbox">
+                                    <div class="boxes">
+                                      <input type="checkbox" id="box-1">
+                                      <label for="box-1">Грузчики на погрузку </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="put otkuda">
+                                <label for="">Расстояник в другие регионы (км):</label>
+                                <input id="rangetree" type="range" min="0" max="100" value="0">
+                                <input type="number" value="221" name="result-put">
+                                <div class="checkbox dal">
+                                    <div class="boxes">
+                                          <input type="checkbox" id="box-2">
+                                          <label for="box-2">Учесть грузчиков</label>
+                                    </div>
+                                    <p>Стоимость работы грузчиков - 250р/час. </p>
+                                </div>
+                            </div>
+
+                       </div>
+                       <div class="naleva">
+                           <div class="put otkuda time">
+                                <label for="">Время погрузки:</label>
+                                <input id="rangetree" type="range" min="0" max="24" value="0">
+                                <input type="number" value="0" name="result-put">
+                                <div class="checkbox dal">
+                                    <div class="boxes">
+                                          <input type="checkbox" id="box-3">
+                                          <label for="box-3">Учесть грузчиков</label>
+                                    </div>
+                                    <p>Стоимость работы грузчиков - 250р/час. </p>
+                                </div>
+                            </div>
+                            <div class="otkuda">
+                               <div class="wrapp">
+                                   <label for="calc_region_1">Куда едем:</label>
+                                    <div class="select_main">
+                                        <p></p>
+                                        <select name="version_pledge" id="calc_region_1">
+                                            <option value="1">Ростов-на-Дону</option>
+                                            <option value="2">Батайск</option>
+                                            <option value="3">Из области</option>
+                                        </select>
+                                    </div>
+                               </div>
+                                <div class="checkbox">
+                                    <div class="boxes">
+                                      <input type="checkbox" id="box-4">
+                                      <label for="box-4">Грузчики на погрузку </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="radio_buttons what">
+                               <div class="zag">
+                                   <h4>Что везем:</h4>
+                               </div>
+                                <div class="flex-wrap otstup">
+                                    <div class="button-calc">
+                                        <input type="radio" name="option" id="radio4" checked />
+                                        <label for="radio4">Вещи/технику</label>
+                                    </div>
+                                    <div class="button-calc">
+                                        <input type="radio" name="option" id="radio5" />
+                                        <label for="radio5">Быт. мусор</label>
+                                    </div>
+                                    <div class="button-calc">
+                                        <input type="radio" name="option" id="radio6" />
+                                        <label for="radio6">Строй. мусор</label>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                   </div>
+                   <div class="btn-shade ots"><button>Рассчитать</button></div>
+	            </form>
+	            
+	            
+	        </div>
+	    </div>
 	</section>
+    <section class="four-scrn">
+        <div class="container">
+           <div class="ttl aboutus-ttl">
+                <h2>Мы знаем толк в перевозках</h2>
+            </div>
+             <div class="aboutus">
+                <div class="block-autos">
+                    <div class="flex-wrap">
+                        <div class="item">
+                            <div class="img"><img src="img/auto1.png" alt=""></div>
+                            <div class="desc">
+                                <p>Объем 9 м.куб</p>
+                                <p>Грузоподъемность	1500 кг</p>
+                            </div>
+                            <div class="box">
+                            <div class="var ed-1">2м</div>
+                            <div class="var ed-2">3м</div>
+                            <div class="var ed-3">1.5м</div>
+                            <img src="img/box1.png" alt=""></div>
+                            <div class="btn about"><button>Заказать</button></div>
+                        </div>
+                        <div class="item">
+                            <div class="img"><img src="img/auto2.png" alt=""></div>
+                            <div class="desc">
+                                <p>Объем 17 м.куб</p>
+                                <p>Грузоподъемность	1500 кг</p>
+                            </div>
+                            <div class="box">
+                            <div class="var ed-1">2м</div>
+                            <div class="var ed-4">3м</div>
+                            <div class="var ed-3">1.5м</div>
+                            <img src="img/box2.png" alt=""></div>
+                            <div class="btn about"><button>Заказать</button></div>
+                        </div>
+                        <div class="item">
+                            <div class="img"><img src="img/auto3.png" alt=""></div>
+                            <div class="desc">
+                                <p>Объем 11 м.куб</p>
+                                <p>Грузоподъемность	1500 кг</p>
+                            </div>
+                            <div class="box">
+                            <div class="var ed-1">2м</div>
+                            <div class="var ed-2">3м</div>
+                            <div class="var ed-3">1.5м</div>
+                            <img src="img/box3.png" alt=""></div>
+                            <div class="btn about"><button>Заказать</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="five-scrn">
+        <div class="container">
+            <div class="whowe">
+                <div class="ttl">
+                    <h2>Как мы работаем</h2>
+                </div>
+                <div class="who">
+                    <div class="item">
+                        <div class="numb"><span>1</span></div>
+                        <div class="item-block">
+                            <div class="ttl-who">
+                                <h4>Вы оставляете заявку</h4>
+                            </div>
+                            <div class="desc">
+                                <p>Из 74 водителей находим свободных 
+                                на удобное или ближайшее время.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="numb"><span>2</span></div>
+                        <div class="item-block">
+                            <div class="ttl-who">
+                                <h4>Мы подбираем водителей</h4>
+                            </div>
+                            <div class="desc">
+                                <p>Из 74 водителей находим свободных 
+                                на удобное или ближайшее время.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item bot ots">
+                        <div class="numb"><span>3</span></div>
+                        <div class="item-block">
+                            <div class="ttl-who">
+                                <h4>Затем перевозим объект</h4>
+                            </div>
+                            <div class="desc">
+                                <p>В назначенное время к вам приедет 
+                                машина с грузчиком.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item bot ots">
+                        <div class="numb"><span>4</span></div>
+                        <div class="item-block">
+                            <div class="ttl-who">
+                                <h4>И оплата после сделки</h4>
+                            </div>
+                            <div class="desc">
+                                <p>Мы работаем без предоплаты. 
+                                Вы платить только после перевозки.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-shade who-btn"><button>Узнать подробности</button></div>
+                </div>
+            </div>
+            <div class="jobs">
+                <div class="ttl">
+                    <h2>Кто мы</h2>
+                </div>
+                <div class="job">
+                    <div class="item">
+                        <div class="img"><img src="img/maps-and-flags.png" alt=""></div>
+                        <div class="ttl-job">
+                            <h3>Автопарк из более чем 200<br>
+                            машин разной грузоподъемности</h3>
+                        </div>
+                        <div class="desc">
+                            <p>Перевозим любой груз массой до 10 тонн и объемом 
+                                до 50 кб/м. Этого достаточно, чтобы перевезти всю 
+                                мебель и бытовую технику в другой дом. 
+                                Специальные машины для перевозки строительного 
+                                мусора увезут все ненужное после ремонта.</p>
+                        </div>
+                        </div>
+                        <div class="item">
+                            <div class="img"><img src="img/money-icons.png" alt=""></div>
+                            <div class="ttl-job">
+                                <h3>Подача машины в любой<br>район города всего за 15 минут!</h3>
+                            </div>
+                            <div class="desc">
+                                <p>В нашем распоряжении всегда есть свободные 
+                                    грузовые машины в Ростове-на-Дону и
+                                     Ростовской области. Обширная сеть партнеров 
+                                    поможет решить любую Вашу задачу на 
+                                    грузоперевозку нестандартных грузов.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img"><img src="img/title.png" alt=""></div>
+                            <div class="ttl-job">
+                                <h3>Квартирный переезд<br>всего за 1000 рублей</h3>
+                            </div>
+                            <div class="desc">
+                                <p>Мы не используем посредников-агентов.
+                                    На всех публичных площадках (досках объявлений) 
+                                    постоянно "сидят" сотни посредников, поэтому 
+                                    заказ на грузоперевозку у них выйдет Вам дороже. 
+                                    Мы используем собственные машины и сотрудников, 
+                                    это сокращает издержки для нас и для Вас.</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="six-scrn">
+        <div class="container">
+            <div class="ttl ttl-cont">
+                <h2>Контактная информация</h2>
+            </div>
+            <div class="contacts">
+                <div class="col-6">
+                    <div class="ttl-contacts">
+                        <h3>Для связи:</h3>
+                    </div>
+                    <div class="desc">
+                        <div class="con-s">
+                            <div class="phone"><i><img src="img/phone.png" alt=""></i> <a href="tel:8(928) 107-82-61">8(928) 107-82-61</a></div>
+                            <div class="envelope"><i><img src="img/envelope.png" alt=""></i> <a href="mailto:info@domaim.ru">info@domaim.ru</a></div>
+                        </div>
+                        <div class="map"><img src="img/map.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="ttl-contacts">
+                        <h3>Напишите сообщение:</h3>
+                    </div>
+                    <form action="">
+                        <input type="text"placeholder="Ваше имя:" >
+                        <input type="text"placeholder="Ваш телефон:" >
+                        <textarea name="" placeholder="Ваше сообщение:" id="" cols="30" rows="10"></textarea>
+                        <div class="btn btn-cont"><button>Отправить</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="flex">
+                <div class="logo"><a href="/"><img src="img/f-logo.png" alt=""></a></div>
+                <div class="f-menu">
+                   <nav>
+                        <ul>
+                            <li><a href="">Главная</a></li>
+                            <li><a href="">Наши услуги</a></li>
+                            <li><a href="">Заказать</a></li>
+                            <li><a href="">Как мы работаем</a></li>
+                            <li><a href="">Почему мы</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="f-phone"><a href="tel:8(928) 107-82-61">8(928) <span>107-82-61</span></a></div>
+            </div>
+            <div class="copyright">
+                <p>Все права защищены. Сайт подготовлен <a target="_blank" href="ewal-web.ru">ewal-web.ru</a></p>
+                <p>Copyright © 2018</p>
+            </div>
+        </div>
+    </footer>
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	    
+    <script src="js/custom.js"></script>
 </body>
 </html>
