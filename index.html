@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<section class="one-scrn">
+	<section id="one-scrn" class="one-scrn">
 			<header>
 				<div class="container flex">
 					<div class="logo">
@@ -26,17 +26,18 @@
 						<div class="phone">
 							<div class="ph"><a href="tel:89281078261"><img src="img/phone.png" alt=""> 8(928) <span>107-82-61</span></a></div>
 							<div class="callback">
-								<div class="btn"><button>Обратный звонок</button></div>
+                                <div class="btn"><a class="popup-with-form" href="#test-form"><button>Обратный звонок</button></a></div>
 							</div>
 						</div>
-						<nav>
-							<ul>
-								<li class="active"><a href="#one-scrn">Главная</a></li>
-								<li><a href="#two-scrn">Наши услуги</a></li>
-								<li><a href="#three-scrn">Заказать</a></li>
-								<li><a href="#four-scrn">Как мы работаем</a></li>
-								<li><a href="#five-scrn">Почему мы</a></li>
-								<li><a href="#six-scrn">Контакты</a></li>
+						<button id="btn-menu" class="menu-toggle"></button>
+						<nav class="mmenu">
+							<ul class="menu">
+								<li class="active"><a class="ancLinks" href="#one-scrn">Главная</a></li>
+								<li><a class="ancLinks" href="#two-scrn">Наши услуги</a></li>
+								<li><a class="ancLinks" href="#three-scrn">Заказать</a></li>
+								<li><a class="ancLinks" href="#four-scrn">Почему мы</a></li>
+								<li><a class="ancLinks" href="#five-scrn">Как мы работаем</a></li>
+								<li><a class="ancLinks" href="#six-scrn">Контакты</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -53,13 +54,13 @@
 							<p>По области и России от 15 руб/км. </p>
 							<p>Грузчики от 250 руб/час</p>
 						</div>
-						<div class="btn one-screen"><button>Получить бесплатную консультацию!</button></div>
+                        <div class="btn one-screen"><a class="popup-with-form" href="#test-form"><button>Получить бесплатную консультацию!</button></a></div>
 					</div>
 					<div class="auto"><div class="img"><img src="img/auto.png" alt=""></div></div>
 				</div>
 			</div>
 	</section>
-	<section class="two-scrn">
+	<section id="two-scrn" class="two-scrn">
 		<div class="container">
 			<div class="services">
 				<div class="ttl">
@@ -179,8 +180,8 @@
 			</div>
 		</div>
 		
-		<div class="container">
-	        <div class="ttl">
+		<div id="three-scrn" class="container">
+	        <div class="ttl ttl-calcilator">
 	            <h2>Рассчитать стоимость грузоперевозки</h2>
 	        </div>
 	        <div class="calculator">
@@ -191,22 +192,20 @@
                                <div class="zag">
                                    <h4>Выберите направление:</h4>
                                </div>
-
                                 <div class="flex-wrap otstup">
                                     <div class="button-calc">
-                                        <input type="radio" name="option" id="radio1" checked />
+                                        <input type="radio" name="napravlen" value="В городе" id="radio1" checked />
                                         <label for="radio1">В городе</label>
                                     </div>
                                     <div class="button-calc">
-                                        <input type="radio" name="option" id="radio2" />
+                                        <input type="radio" name="napravlen" value="По области" id="radio2" />
                                         <label for="radio2">По области</label>
                                     </div>
                                     <div class="button-calc">
-                                        <input type="radio" name="option" id="radio3" />
+                                        <input type="radio" name="napravlen" value="По России" id="radio3" />
                                         <label for="radio3">По России</label>
                                     </div>
                                 </div>
-
                                 <div class="opisanie">
                                     <p>
                                         По г.Ростову-на-Дону ставка 500р в час.
@@ -224,7 +223,7 @@
                                    <label for="calc_region_1">Откуда едем:</label>
                                     <div class="select_main">
                                         <p></p>
-                                        <select name="version_pledge" id="calc_region_1">
+                                        <select name="otkuda" id="calc_region_1">
                                             <option value="1">Ростов-на-Дону</option>
                                             <option value="2">Батайск</option>
                                             <option value="3">Из области</option>
@@ -238,10 +237,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="put otkuda">
+                            <div class="put otkuda none">
                                 <label for="">Расстояник в другие регионы (км):</label>
-                                <input id="rangetree" type="range" min="0" max="100" value="0">
-                                <input type="number" value="221" name="result-put">
+                                <input id="rangetree" class="range" type="range" min="0" max="100" value="0">
+                                <input id="rangrasstoyan" type="text" value="" name="result-put">
                                 <div class="checkbox dal">
                                     <div class="boxes">
                                           <input type="checkbox" id="box-2">
@@ -249,31 +248,32 @@
                                     </div>
                                     <p>Стоимость работы грузчиков - 250р/час. </p>
                                 </div>
+                                <div id="putOplet" class="oplet"></div>
                             </div>
 
                        </div>
                        <div class="naleva">
                            <div class="put otkuda time">
-                                <label for="">Время погрузки:</label>
-                                <input id="rangetree" type="range" min="0" max="24" value="0">
-                                <input type="number" value="0" name="result-put">
-                                <div class="checkbox dal">
-                                    <div class="boxes">
-                                          <input type="checkbox" id="box-3">
-                                          <label for="box-3">Учесть грузчиков</label>
+                                    <label for="">Время погрузки:</label>
+                                    <input id="rangeTime" class="range" type="range" min="0" max="24" value="0">
+                                    <input id="rangVrema" type="text" value="0" name="result-put">
+                                    <div class="checkbox dal">
+                                        <div class="boxes">
+                                              <input type="checkbox" id="box-3">
+                                              <label for="box-3">Учесть грузчиков</label>
+                                        </div>
+                                        <p>Стоимость работы грузчиков - 250р/час. </p>
                                     </div>
-                                    <p>Стоимость работы грузчиков - 250р/час. </p>
-                                </div>
                             </div>
                             <div class="otkuda">
                                <div class="wrapp">
                                    <label for="calc_region_1">Куда едем:</label>
                                     <div class="select_main">
                                         <p></p>
-                                        <select name="version_pledge" id="calc_region_1">
+                                        <select name="kuda" id="calc_region_2">
                                             <option value="1">Ростов-на-Дону</option>
-                                            <option value="2">Батайск</option>
-                                            <option value="3">Из области</option>
+                                            <option value="2">По области</option>
+                                            <option value="3">По России</option>
                                         </select>
                                     </div>
                                </div>
@@ -290,29 +290,29 @@
                                </div>
                                 <div class="flex-wrap otstup">
                                     <div class="button-calc">
-                                        <input type="radio" name="option" id="radio4" checked />
+                                        <input type="radio" value="Вещи/технику" name="predmet" id="radio4" checked />
                                         <label for="radio4">Вещи/технику</label>
                                     </div>
                                     <div class="button-calc">
-                                        <input type="radio" name="option" id="radio5" />
+                                        <input type="radio" value="Быт. мусор" name="predmet" id="radio5" />
                                         <label for="radio5">Быт. мусор</label>
                                     </div>
                                     <div class="button-calc">
-                                        <input type="radio" name="option" id="radio6" />
+                                        <input type="radio" value="Строй. мусор" name="predmet" id="radio6" />
                                         <label for="radio6">Строй. мусор</label>
                                     </div>
                                 </div>
                             </div>
                        </div>
                    </div>
-                   <div class="btn-shade ots"><button>Рассчитать</button></div>
+                   <div class="btn-shade ots"><button id="btn-calc">Рассчитать</button></div>
 	            </form>
 	            
 	            
 	        </div>
 	    </div>
 	</section>
-    <section class="four-scrn">
+    <section id="four-scrn" class="four-scrn">
         <div class="container">
            <div class="ttl aboutus-ttl">
                 <h2>Мы знаем толк в перевозках</h2>
@@ -331,7 +331,7 @@
                             <div class="var ed-2">3м</div>
                             <div class="var ed-3">1.5м</div>
                             <img src="img/box1.png" alt=""></div>
-                            <div class="btn about"><button>Заказать</button></div>
+                            <div class="btn about"><a class="popup-with-form" href="#test-form"><button>Заказать</button></a></div>
                         </div>
                         <div class="item">
                             <div class="img"><img src="img/auto2.png" alt=""></div>
@@ -344,7 +344,7 @@
                             <div class="var ed-4">3м</div>
                             <div class="var ed-3">1.5м</div>
                             <img src="img/box2.png" alt=""></div>
-                            <div class="btn about"><button>Заказать</button></div>
+                            <div class="btn about"><a class="popup-with-form" href="#test-form"><button>Заказать</button></a></div>
                         </div>
                         <div class="item">
                             <div class="img"><img src="img/auto3.png" alt=""></div>
@@ -357,14 +357,14 @@
                             <div class="var ed-2">3м</div>
                             <div class="var ed-3">1.5м</div>
                             <img src="img/box3.png" alt=""></div>
-                            <div class="btn about"><button>Заказать</button></div>
+                            <div class="btn about"><a class="popup-with-form" href="#test-form"><button>Заказать</button></a></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="five-scrn">
+    <section id="five-scrn" class="five-scrn">
         <div class="container">
             <div class="whowe">
                 <div class="ttl">
@@ -419,7 +419,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="btn-shade who-btn"><button>Узнать подробности</button></div>
+                    <div class="btn-shade who-btn"><a class="popup-with-form" href="#test-form"><button>Узнать подробности</button></a></div>
                 </div>
             </div>
             <div class="jobs">
@@ -472,7 +472,7 @@
             </div>
         </div>
     </section>
-    <section class="six-scrn">
+    <section id="six-scrn" class="six-scrn">
         <div class="container">
             <div class="ttl ttl-cont">
                 <h2>Контактная информация</h2>
@@ -494,11 +494,12 @@
                     <div class="ttl-contacts">
                         <h3>Напишите сообщение:</h3>
                     </div>
-                    <form action="">
-                        <input type="text"placeholder="Ваше имя:" >
-                        <input type="text"placeholder="Ваш телефон:" >
-                        <textarea name="" placeholder="Ваше сообщение:" id="" cols="30" rows="10"></textarea>
-                        <div class="btn btn-cont"><button>Отправить</button></div>
+                    <form action="javascript:void(null);">
+                        <input required="Введите имя" name="name_cont" type="text" placeholder="Ваше имя:" >
+                        <input required="Введите телефон" name="phone_cont" type="text" placeholder="Ваш телефон:" >
+                        <textarea name="phone_message" placeholder="Ваше сообщение:" id="" cols="30" rows="10"></textarea>
+                        
+                        <div class="btn btn-cont result"><button id="btn_cont">Отправить</button></div>
                     </form>
                 </div>
             </div>
@@ -511,13 +512,13 @@
                 <div class="f-menu">
                    <nav>
                         <ul>
-                            <li><a href="">Главная</a></li>
-                            <li><a href="">Наши услуги</a></li>
-                            <li><a href="">Заказать</a></li>
-                            <li><a href="">Как мы работаем</a></li>
-                            <li><a href="">Почему мы</a></li>
-                            <li><a href="">Контакты</a></li>
-                        </ul>
+								<li class="active"><a class="ancLinks" href="#one-scrn">Главная</a></li>
+								<li><a class="ancLinks" href="#two-scrn">Наши услуги</a></li>
+								<li><a class="ancLinks" href="#three-scrn">Заказать</a></li>
+								<li><a class="ancLinks" href="#four-scrn">Почему мы</a></li>
+								<li><a class="ancLinks" href="#five-scrn">Как мы работаем</a></li>
+								<li><a class="ancLinks" href="#six-scrn">Контакты</a></li>
+				        </ul>
                     </nav>
                 </div>
                 <div class="f-phone"><a href="tel:8(928) 107-82-61">8(928) <span>107-82-61</span></a></div>
@@ -528,11 +529,29 @@
             </div>
         </div>
     </footer>
+    <form id="test-form" class="white-popup-block mfp-hide modal-form" action="javascript:void(null);">
+        <h3>Заполните форму</h3>
+        <fieldset style="border:0;">
+            <ol>
+                <li>
+                    <input id="name" name="name_modal" type="text" placeholder="Ваше имя:" required="Введите имя">
+                </li>
+                <li>
+                    <input id="phone" name="phone_modal" type="tel" placeholder="Ваш телефон:" required="Введите телефон">
+                </li>
+            </ol>
+            <div class="btn-shade btn-form result"><button id="btn_modal">Отправить</button></div>
+        </fieldset>
+    </form>
+    <a href="#" class="scrollup" style="display: inline;">Наверх</a>
     <script
   src="http://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-	    
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/wow.min.js"></script>    
+    <script src="js/calculator.js"></script>
     <script src="js/custom.js"></script>
 </body>
 </html>
