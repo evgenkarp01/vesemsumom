@@ -614,6 +614,40 @@ section{
                 border-radius: 100%;
                 background: $btncolor;
             }
+            #final-rasch{
+                display: none;
+            }
+            .final-rasch{
+                display: flex;
+                -webkit-flex-direction: column;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                max-width: 550px;
+                border-radius: 16px;
+                background: $bgcolor;
+                color: $wc;
+                text-align: center;
+                padding: 20px;
+                margin: 30px auto;
+                input{
+                    height: 40px;
+                    width: 100%;
+                    padding: 0 20px;
+                    background: #373e31;
+                    border: 2px solid $accentcolor;
+                    border-radius: 7px;
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                    font-family: Lato;
+                    color: $wc;
+                }
+                #resultat-calc{
+                    font-size: 24px;
+                    padding: 20px;
+                    color: $btncolor;
+                    font-family: Roboto Slab;
+                }
+            }
         }
     }
     &.four-scrn{

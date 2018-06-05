@@ -663,6 +663,38 @@ section.two-scrn .calculator input.range[type="range"]::-webkit-slider-thumb {
   border-radius: 100%;
   background: #e5ba04;
 }
+section.two-scrn .calculator #final-rasch {
+  display: none;
+}
+section.two-scrn .calculator .final-rasch {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  border-radius: 16px;
+  background: rgba(5, 39, 20, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin: 30px auto;
+}
+section.two-scrn .calculator .final-rasch input {
+  height: 40px;
+  width: 100%;
+  padding: 0 20px;
+  background: #373e31;
+  border: 2px solid #1be9d8;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: Lato;
+  color: #fff;
+}
+section.two-scrn .calculator .final-rasch #resultat-calc {
+  font-size: 24px;
+  padding: 20px;
+  color: #e5ba04;
+  font-family: Roboto Slab;
+}
 section.four-scrn {
   min-height: 750px;
   background: url(../img/bg4.jpg);

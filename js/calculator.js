@@ -21,6 +21,8 @@ $( document ).ready(function() {
         }
         var kuda  = $("#calc_region_2 option:selected").text();
         var predmet = $('input[name=predmet]:checked').val();
+        $(".final-rasch").show();
+        $("#resultat-calc").text(napravlenie);
     });
     
     $('#rangetree').on('input',function () {
@@ -45,9 +47,10 @@ $( document ).ready(function() {
         $('#rangVrema').val(per + ":00");
     });
     
-    $("#calc_region_2").on("click", function(){
+    $("#calc_region_2, input[name=napravlen]").on("click", function(){
         var kudaVal = $("#calc_region_2 option:selected").val();
-        if(kudaVal != 1){
+        var napr = $('input[name=napravlen]:checked').val();
+        if(kudaVal != 1 || napr=="По России"){
            $('#putOplet').css('display', 'none');
         }else{
             $('#putOplet').css('display', 'block');             
